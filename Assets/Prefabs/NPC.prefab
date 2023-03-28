@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 1706299012023578251}
   - component: {fileID: 1111388418685244504}
   - component: {fileID: 1113861435}
+  - component: {fileID: 1113861436}
   m_Layer: 7
   m_Name: NPC
   m_TagString: Untagged
@@ -233,6 +234,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a969ce01803112c47943dbf3e1f37620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!195 &1113861436
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706299012023578250}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.6
+  m_Speed: 2.5
+  m_Acceleration: 3
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.75
+  m_BaseOffset: 0
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1706299012528506750
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +265,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1706299012528506751}
-  - component: {fileID: 1706299012528506748}
   - component: {fileID: 1461247092602602223}
   m_Layer: 7
   m_Name: MoveComponent
@@ -266,28 +288,6 @@ Transform:
   m_Father: {fileID: 1706299011132592168}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!195 &1706299012528506748
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706299012528506750}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.6
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 0
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.75
-  m_BaseOffset: 0
-  m_WalkableMask: 1
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &1461247092602602223
 MonoBehaviour:
   m_ObjectHideFlags: 0

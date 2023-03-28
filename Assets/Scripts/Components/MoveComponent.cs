@@ -10,12 +10,7 @@ public class MoveComponent : MonoBehaviour, IEntityInjective
     public Action OnMovementStarted;
     public Action OnMovementFinished;
     private NavMeshAgent _navMeshAgent;
-
-
-    /*private void Awake()
-    {
-        _navMeshAgent = GetComponent<NavMeshAgent>();
-    }*/
+    private const float DISTANCE_ERROR = 0.1f;
 
     private void Start()
     {
@@ -39,10 +34,8 @@ public class MoveComponent : MonoBehaviour, IEntityInjective
     {
         while (true)
         {
-            if(Vector3.Distance(transform.position, position) <= 0.1f)
-            //if (_navMeshAgent.pathStatus == NavMeshPathStatus.PathComplete)
+            if(Vector3.Distance(transform.position, position) <= DISTANCE_ERROR)
             {
-                Debug.Log("Destination reached");
                 OnMovementFinished?.Invoke();
                 yield break;
             }
