@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 1111388418685244504}
   - component: {fileID: 1113861435}
   - component: {fileID: 1113861436}
+  - component: {fileID: 5041042571966513084}
   m_Layer: 7
   m_Name: NPC
   m_TagString: Untagged
@@ -243,7 +244,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1706299012023578250}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.6
+  m_Radius: 0.35
   m_Speed: 2.5
   m_Acceleration: 3
   avoidancePriority: 50
@@ -256,6 +257,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
+--- !u!208 &5041042571966513084
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706299012023578250}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.44, y: 1, z: 0.44}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1706299012528506750
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76bd6b143577d624e826df2dd8a15af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceError: 0.25
 --- !u!1 &1706299012703219679
 GameObject:
   m_ObjectHideFlags: 0
